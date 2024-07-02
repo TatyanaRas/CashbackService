@@ -7,6 +7,10 @@ public class CashbackHackService {
         if (amount < 1000) {
             return boundary - amount % boundary;
         }
+        if (amount > 1000) {
+            return 0;
+        }
+
         return amount;
     }
 }
