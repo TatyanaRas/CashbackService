@@ -39,5 +39,23 @@ public class CashbackHackServiceTest {
         int expected = 0;
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void boundary1() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
+        int amount = 999;
+        int actual = cashbackHackService.remain(amount);
+        int expected = 1;
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void boundary2() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
+        int amount = 1001;
+        int actual = cashbackHackService.remain(amount);
+        int expected = 0;
+        assertEquals(actual, expected);
+    }
 }
 
